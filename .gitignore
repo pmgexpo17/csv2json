@@ -1,0 +1,4 @@
+*.pyc
+demo01.egg-info
+setup.py
+README.rst

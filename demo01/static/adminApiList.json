@@ -1,0 +1,38 @@
+{'Title':'csv2json Api Admin Services',
+	'admin services':
+	{'/api/v1/users':
+		{'get all current users':
+			{'curl input':
+				{'1':"-H 'X-Api-Token:{adminToken}'"},
+			'api output':'json list of current user names'
+		}
+	},
+	{'/api/v1/user/{userName}':
+		{'add a new user':
+			{'curl input':
+				{'1':'-X PUT',
+				'2':"-H 'X-Api-Token:{adminToken}'"
+				},
+			'api output':'json hash of user name and new token'
+		}
+	},
+	{'/api/v1/user/{userName}':
+		{'delete an existing user':
+			{'curl input':
+				{'1':'-X DELETE',
+				'2':"-H 'X-Api-Token:{adminToken}'"
+				},
+			'api output':'json hash of user name'
+		}
+	},
+	{'/api/v1/user/{userName}':
+		{'patch an existing user, including admin, by updating with a new token':
+			{'curl input':
+				{'1':'-X PATCH',
+				'2':"-H 'X-Api-Token:{adminToken}'"
+				},
+			'api output':'json hash of user name and new token'
+		}
+	},
+}		
+		

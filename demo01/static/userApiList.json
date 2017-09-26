@@ -1,0 +1,35 @@
+{'Title':'csv2json Api Services',
+	'services':
+	{'/api/v1/csv2json/test/{userName}':
+		{'csv2json conversion test':
+			{'curl input':
+				{'1':'-X POST',
+				'2':"-H 'X-Api-Token:{yourToken}'",
+				'3':'-F srcfile=@{/local/path/to/your/csv/{srcfile}.zip'},
+			'api output':'api parsing report confirms data is valid or otherwise'
+		}
+	},
+	'/api/v1/csv2json/{userName}':
+		{'csv2json conversion':
+			{'curl input':'same as for csv2json conversion test',
+			'api output':'converted json text stream'
+		}
+	},
+	'/api/v1/json2csv/test/{userName}':
+		{'json2csv conversion test':
+			{'curl input':
+				{'1':'-X POST',
+				'2':"-H 'X-Api-Token:{yourToken}'",
+				'3':'-F srcfile=@{/local/path/to/your/json/{srcfile}.json'},
+			'api output':'api parsing report confirms data is valid or otherwise'
+		}
+	},
+	'/api/v1/json2csv/{userName}':
+		{'json2csv conversion':
+			{'curl input':'same as for json2csv conversion test',
+			'api output':'converted csv zipfile binary stream'
+			}
+		}
+	}
+}		
+		
